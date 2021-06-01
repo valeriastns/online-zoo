@@ -1,0 +1,107 @@
+.error-page
+    display: flex
+    align-items: baseline
+    justify-content: center
+    background: url('../assets/bg/error-page-bg.svg') bottom center/contain no-repeat
+    min-height: 117vh
+    margin-bottom: -85px
+    .error-page-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        &__title
+            font-family: 'Sahitya', serif
+            font-style: normal
+            font-weight: normal
+            font-size: 250px
+            line-height: 388px
+            display: flex
+            align-items: center
+            text-transform: uppercase
+            color: $dark
+        &__text
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 19px
+            color: $dark
+        &__button
+            font-family: Roboto Mono
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 24px
+            letter-spacing: -0.05em
+            text-transform: uppercase
+            color: #F3F7F8
+            margin: 0px 10px
+            background: $main
+            border-radius: 100px
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            padding: 14px 78px
+            margin-top: 41px
+            outline: none
+            border: none
+            filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+        &__button:hover
+            background-color: $dark
+            filter: drop-shadow(0px 2px 20px rgba(34, 100, 109, 0.6))
+        &__button:active
+            background-color: $white
+            color: $dark
+            filter: drop-shadow(0px 2px 20px rgba(4, 106, 119, 0.6))
+@media(max-width: 1400px)
+    .error-page
+        min-height: 750px
+        margin-bottom: -55px
+        .error-page-content
+            margin-top: 15%
+            &__title
+                font-size: 180px
+                line-height: 0
+                margin-bottom: 30%
+@media(max-width: 1200px)
+    .error-page
+        min-height: 750px
+        margin-bottom: -55px
+        .error-page-content
+            margin-top: 35%
+@media(max-width: 640px)
+    .error-page
+        background: url('../assets/bg/inner-bg-320.svg') bottom center/contain no-repeat
+        min-height: 92vh
+        margin-bottom: -50px
+        .error-page-content
+            margin-top: 50%
+            &__title
+                font-size: 140px
+            &__text
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 19px
+                color: $dark
+            &__button
+                font-family: Roboto Mono
+                font-style: normal
+                font-weight: normal
+                font-size: 18px
+                line-height: 24px
+                letter-spacing: -0.05em
+                text-transform: uppercase
+                color: #F3F7F8
+                margin: 0px 10px
+                background: $main
+                border-radius: 100px
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                padding: 14px 78px
+                margin-top: 41px
+                outline: none
+                border: none
+                filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
