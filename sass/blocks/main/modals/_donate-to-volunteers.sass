@@ -1,0 +1,148 @@
+#pop-up-donate
+    display: none
+    .donate-content
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+        width: 568px
+        height: 883px
+        padding: 46px 60px
+        .pop-up-title
+            font-family: Rubik
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            text-transform: uppercase
+            color: #0D444D
+        .pop-up-subtitle
+            font-family: Roboto
+            font-style: italic
+            font-weight: normal
+            font-size: 16px
+            color: #2D2D2D
+        .field-title
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 16px
+            text-transform: uppercase
+            color: #0D444D
+            margin-bottom: 8px
+        .field-input
+            width: 448px
+            height: 54px
+            background: #FFFFFF
+            box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+            border-radius: 10px
+            padding: 5px
+            margin-bottom: 20px
+            border: none
+        .payment
+            display: flex
+            align-items: center
+            width: 448px
+            height: 54px
+            border: 1px solid $main
+            box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+            border-radius: 10px
+            overflow: hidden
+            .payment-btn
+                width: 50%
+                height: 100%
+                overflow: hidden
+                font-family: Roboto
+                font-size: 16px
+                color: $main
+                outline: none
+                border: none
+                cursor: pointer
+            .payment-active
+                background-color: $main
+                color: #ffff
+        .payment-options
+            .payment-quantity
+                width: 74px
+                height: 54px
+                border-radius: 10px
+                border: 1px solid $main
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 19px
+                text-align: center
+                color: #19707D
+                outline: none
+                cursor: pointer
+            .payment-quantity-active
+                background-color: #19707D
+                color: #ffff
+                box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+        .payment-cards
+            display: flex
+            justify-content: flex-end
+            .american-express
+                background: url('../assets/icons/americanexpress-card-icon.svg') center center/cover no-repeat
+                width: 13px
+                height: 13px
+                display: block
+            .visa
+                background: url('../assets/icons/visa-card-icon.svg') center center/cover no-repeat
+                width: 33px
+                height: 10px
+                display: block
+            .master-card
+                background: url('../assets/icons/master-card-icon.svg') center center/cover no-repeat
+                width: 22px
+                height: 14px
+                display: block
+            .maestro
+                background: url('../assets/icons/maestro-card-icon.svg') center center/cover no-repeat
+                width: 18px
+                height: 14px
+                display: block
+        .card-details
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 448px
+            height: 54px
+            padding: 16px 34px 16px 15px
+            box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+            border-radius: 10px
+            margin-bottom: 24px
+            .payment-card
+                display: flex
+                &__icon
+                    background: url('../assets/icons/credit-card-icon.svg') center center/cover no-repeat
+                    width: 20.3px
+                    height: 16.3px
+                    display: block
+                &__number
+                    margin-left: 16px
+            .payment-details
+                &__date
+                    width: 62px
+                &__cvs
+                    width: 31px
+            .card-iput
+                border: 0
+                outline: none
+        .payment-protection
+            // margin-top: 14px
+            display: flex
+            &__icon
+                background: url('../assets/icons/security-icon.svg') center center/cover no-repeat
+                width: 13px
+                height: 14px
+                display: block
+                margin-right: 12px
+                margin-left: 5px
+            &__text
+                font-family: Roboto
+                font-style: normal
+                font-weight: 300
+                font-size: 14px
+                line-height: 16px
+                color: #2D2D2D

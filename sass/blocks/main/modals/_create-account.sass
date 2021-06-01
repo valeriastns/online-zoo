@@ -1,0 +1,185 @@
+.overlay.opened
+    display: block
+.overlay
+    position: fixed
+    display: none
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: rgba(0, 0, 0, 0.7)
+    z-index: 5
+    transition: opacity 500ms
+    .create-account
+        margin-top: -387px
+        margin-left: -284px
+        width: 568px
+        height: 774px
+    .pop-up-content
+        top: 50%
+        left: 50%
+        position: fixed
+        background-color: #ffff
+        border-radius: 20px
+        transition: all 5s ease-in-out
+        overflow: hidden
+        .pop-up-header
+            height: 125px
+            background: $main
+            display: flex
+            align-items: center
+            margin-bottom: 32px
+            .pop-up-logo
+                background: url(../assets/icons/logo-large.svg) center center/cover no-repeat
+                display: block
+                width: 78px
+                height: 61px
+                margin: 0 auto
+        .pop-up__wrapper
+            padding: 32px 60px 46px 60px
+        .tabs
+            height: 43px
+            width: 448px
+            display: flex
+            justify-content: right
+            margin-bottom: 32px
+            border-bottom: 2px solid #F3F7F8
+            .tab
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 18px
+                line-height: 21px
+                text-transform: uppercase
+                color: #0D444D
+                text-align: center
+            .create-acc-tab
+                margin-right: 109px
+            .active-tab
+                border-bottom: 2px solid $main
+                width: 50%
+        .sign-in-options
+            display: flex
+            justify-content: space-evenly
+            margin-bottom: 32px
+            .sign-in-btn
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 216px
+                height: 54px
+                box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+                border-radius: 10px
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 19px
+                color: #2D2D2D
+                text-transform: capitalize
+                .google-icon
+                    background: url('../assets/icons/google-logo.svg')
+                .facebook-icon
+                    background: url('../assets/icons/fb-logo.svg')
+                .social-icon
+                    width: 24px
+                    height: 24px
+                    display: block
+                    margin-right: 15px
+            .sign-in-google
+                margin-right: 15px
+        .fields-container
+            display: flex
+            flex-direction: column
+            .field-title
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 14px
+                line-height: 16px
+                text-transform: uppercase
+                color: #0D444D
+                margin-bottom: 8px
+            .field-input
+                width: 448px
+                height: 54px
+                background: #FFFFFF
+                box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+                border-radius: 10px
+                padding: 5px
+                margin-bottom: 20px
+                border: none
+        .user-agreement
+            margin-bottom: 32px
+            .container-input
+                display: flex
+                justify-content: flex-start
+                align-items: center
+                &__text
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 16px
+                    color: #2D2D2D
+                    text-decoration: capitalize
+                    .container-input__text-link
+                        color: #2D2D2D
+                        text-transform: capitalize
+                        text-decoration: underline
+                .input-checkbox
+                    position: relative
+                    input:checked ~ .checkmark
+                        background-color: #2A8086
+                    input:checked ~ .checkmark:after
+                        display: block
+                    input
+                        opacity: 0
+                        cursor: pointer
+                        height: 1px
+                        width: 1px
+                        background-color: #FFFFF
+                        position: absolute
+                    .checkmark
+                        border: 1.5px solid #19707D
+                        box-sizing: border-box
+                        width: 22px
+                        height: 22px
+                        border-radius: 4px
+                        margin-right: 22px
+                        cursor: pointer
+                        display: block
+                        position: relative
+                    .checkmark:after
+                        content: ""
+                        position: absolute
+                        display: none
+                    .checkmark:after
+                        left: 6px
+                        top: 1px
+                        width: 5px
+                        height: 10px
+                        border: solid white
+                        border-width: 0 3px 3px 0
+                        -webkit-transform: rotate(45deg)
+                        -ms-transform: rotate(45deg)
+                        transform: rotate(45deg)
+
+        .button-send
+            width: 448px
+            height: 54px
+            background: #2A8088
+            box-shadow: 0px 2px 20px rgba(185, 213, 217, 0.6)
+            border-radius: 100px
+            font-family: Roboto Mono
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            color: #C5E1E6
+            outline: none
+            border: none
+            cursor: pointer
+        .button-send.disabled
+            background: #8f9b9c
+            cursor: default
