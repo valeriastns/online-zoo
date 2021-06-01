@@ -1,0 +1,138 @@
+.beautiful-animals
+    min-height: 350px
+    .content
+        .beautiful-animals__header
+            margin-bottom: 50px
+            .beautiful-animals__title
+                font-family: Rubik
+                font-style: normal
+                font-weight: normal
+                font-size: 24px
+                line-height: 28px
+                text-transform: uppercase
+                color: #0D444D
+        .animals
+            height: 131px
+            width: 100%
+            display: flex
+            justify-content: space-between
+            .image
+                .img-wrapper
+                    position: relative
+                    z-index: 2
+                    .img-border
+                        visibility: hidden
+                        animation: rotate-out linear 0.4s
+                        background: url('../assets/images/img-frame.svg')
+                        width: 120px
+                        height: 115px
+                        padding-top: 20px
+                    .img-inner
+                        width: 76px
+                        height: 73px
+                        margin: 0 auto
+                        position: absolute
+                        z-index: 1
+                        top: 23px
+                        left: 23px
+                    .img-inner.panda
+                        background: url('../assets/images/panda.png') center center/cover no-repeat
+                    .img-inner.gorilla
+                        background: url('../assets/images/gorilla.png') center center/cover no-repeat
+                    .img-inner.eagle
+                        background: url('../assets/images/eagle.png') center center/cover no-repeat
+                    .img-inner.aligator
+                        background: url('../assets/images/alligator.png') center center/cover no-repeat
+                    .img-inner.elephant
+                        background: url('../assets/images/elephants.png') center center/cover no-repeat
+                    .img-inner.lemur
+                        background: url('../assets/images/lemur.png') center center/cover no-repeat
+                    .img-inner.panda
+                        background: url('../assets/images/panda.png') center center/cover no-repeat
+
+                .img-wrapper:hover .img-border
+                    visibility: visible
+                    transition: all 3s linear
+                    animation: rotate-in linear 0.4s
+                .img-title
+                    font-family: Roboto Mono
+                    font-style: normal
+                    font-weight: 500
+                    font-size: 14px
+                    line-height: 18px
+                    text-align: center
+                    text-transform: uppercase
+                    color: #2D2D2D
+            .slider-arrows
+                width: 52px
+                height: 104px
+                margin-top: 10px
+                &__left
+                    background: url('../assets/icons/arrow-left.svg') center center/cover no-repeat
+                &__right
+                    background: url('../assets/icons/arrow-right.svg') center center/cover no-repeat
+                .button
+                    width: 52px
+                    height: 52px
+                    border: none
+                    outline: none
+                    transition: transform .2s
+                .button:hover
+                    transform: scale(1.5)
+            .expand-arrow
+                display: none
+
+@media(max-width: 1400px)
+    .beautiful-animals
+        margin-bottom: 50px
+        min-height: 131px
+@media(max-width: 1199px)
+    .beautiful-animals
+        min-height: 177px
+        .content
+            .beautiful-animals__header
+                margin-bottom: 26px
+                .beautiful-animals__title
+                    font-size: 18px
+            .animals
+                a:nth-of-type(n+5)
+                    display: none
+@media(max-width: 639px)
+    .beautiful-animals
+        min-height: 395px
+        margin-bottom: 0px
+        .content
+            .beautiful-animals__header
+                margin-bottom: 12px
+                .beautiful-animals__title
+                    font-size: 17px
+            .animals
+                height: 302px
+                width: 100%
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-evenly
+                a:nth-of-type(n+6)
+                    display: block
+                .image
+                    width: 96px
+                    .img-wrapper
+                        .img-inner
+                .img-title
+                    padding-left: 20px
+                .slider-arrows
+                    display: none
+                .expand-arrow
+                    display: block
+                    margin-top: 18px
+                    width: 52px
+                    height: 52px
+                    &__down
+                        background: url('../assets/icons/arrow-down.svg') center center/contain no-repeat
+                        width: 52px
+                        height: 52px
+                        border: none
+                        outline: none
+                        transition: all .2s ease-in-out
+                    &__down:hover
+                        transform: scale(1.5)

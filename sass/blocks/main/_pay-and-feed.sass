@@ -1,0 +1,192 @@
+.pay-and-feed
+    min-height: 564px
+    width: 100%
+    background: url('../assets/bg/bottom-bg-1920.svg')
+    margin-bottom: 100px
+    .content
+        min-height: 422px
+        position: relative
+        .pay-and-feed__header
+            display: flex
+            justify-content: space-between
+            padding-top: 75px
+            .pay-and-feed__title
+                font-family: Rubik
+                font-style: normal
+                font-weight: normal
+                font-size: 24px
+                line-height: 28px
+                text-transform: uppercase
+                color: $white
+            .button-donate
+                width: 356px
+                height: 52px
+                display: block
+                text-align: center
+                background: $white
+                border-radius: 100px
+                outline: none
+                border: none
+                filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+                font-family: Roboto Mono
+                font-weight: normal
+                font-size: 18px
+                line-height: 24px
+                letter-spacing: -0.05em
+                text-transform: uppercase
+                color: $dark
+                cursor: pointer
+            .button-donate:hover
+                background-color: $main
+                color: $white
+
+        .steps
+            width: 85%
+            display: flex
+            justify-content: space-evenly
+            position: absolute
+            top: 75%
+            transform: translate(0, -50%)
+            left: 7%
+            .step
+                display: flex
+                flex-direction: column
+                align-items: center
+                .step-bg
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 145px
+                    height: 145px
+                    background-color: #ffff
+                    border-radius: 100px
+                    box-shadow: 0px 2px 50px rgba(185, 213, 217, 0.6)
+                    margin-bottom: 14px
+                    .step-img
+                        width: 64px
+                        height: 64px
+                    .step-img.first
+                        background: url('../assets/icons/icons8-donate.svg') center no-repeat
+                    .step-img.sec
+                        background: url('../assets/icons/icons8-trust-apple.svg') center no-repeat
+                    .step-img.third
+                        background: url('../assets/icons/icons8-monkey.svg') center no-repeat
+                .step-img-text
+                    text-align: center
+                    .step-descr
+                        font-family: Roboto
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 20px
+                        text-align: center
+                        color: #C5E1E6
+            .arrow
+                width: 273px
+                background: url('../assets/icons/arrow-long.svg') center right no-repeat
+            .vertical-arrow
+                display: none
+
+@media(max-width: 1400px)
+    .pay-and-feed
+        background: url('../assets/bg/bottom-bg-1920.svg') center center/cover no-repeat
+        .content
+            .pay-and-feed__header
+                padding-top: 115px
+                .button-donate
+                    width: 320px
+            .steps
+                .step
+                .arrow
+                    width: 168px
+                    background: url('../assets/icons/arrow-long.svg') center 36%/contain no-repeat
+@media(max-width: 1199px)
+    .pay-and-feed
+        background: url('../assets/bg/bottom-bg-640.svg') center center/100% no-repeat
+        min-height: 364px
+        margin-bottom: 50px
+        .content
+            position: relative
+            .pay-and-feed__header
+                padding-top: 77px
+                .pay-and-feed__title
+                    font-size: 18px
+                .button-donate
+                    width: 174px
+                    height: 42px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    font-size: 14px
+
+            .steps
+                top: 65%
+                left: -1%
+                width: 100%
+                align-items: center
+                .step
+                    position: relative
+                    .step-bg
+                        width: 113px
+                        height: 113px
+                    .step-img
+                        width: 40px
+                        height: 40px
+                .step.step-donation::after
+                    content: url('../assets/icons/arrow-right-640.svg')
+                    width: 15px
+                    height: 21px
+                    position: absolute
+                    top: 29%
+                    left: 105%
+                .step.step-feed-animals::after
+                    content: url('../assets/icons/arrow-right-640.svg')
+                    width: 15px
+                    height: 21px
+                    position: absolute
+                    top: 29%
+                    left: 87%
+                .arrow
+                    display: none
+
+@media(max-width: 739px)
+    .pay-and-feed
+        .content
+            .pay-and-feed__header
+                padding-top: 104px
+@media(max-width: 639px)
+    .pay-and-feed
+        background: url('../assets/bg/bottom-bg-320.svg') center center/cover no-repeat
+        min-height: 911px
+        margin-bottom: 32px
+        .content
+            position: relative
+            .pay-and-feed__header
+                padding-top: 77px
+                .pay-and-feed__title
+                    font-size: 18px
+                .button-donate
+                    width: 300px
+                    height: 40px
+                    background: #C5E1E6
+                    position: absolute
+                    bottom: -95%
+            .steps
+                display: flex
+                flex-direction: column
+                height: 635px
+                top: 103%
+                .step
+                    width: 186px
+                .arrow
+                    display: none
+                .vertical-arrow
+                    background: url('../assets/icons/arrow-down-320.svg') center top/contain no-repeat
+                    display: block
+                    width: 15px
+                    height: 60px
+                    margin-top: 28px
+                .step.step-donation::after
+                    display: none
+                .step.step-feed-animals::after
+                    display: none

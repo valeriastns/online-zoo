@@ -1,0 +1,66 @@
+.footer
+    min-height: 200px
+    background: #196469
+    .footer-conteiner
+        padding-top: 4%
+        .footer__wrapper
+            display: flex
+            justify-content: space-between
+
+            .footer-content
+                display: flex
+                align-items: center
+                .logo
+                    display: inline-block
+                    background: url('../assets/icons/logo-large.svg')
+                    width: 108px
+                    height: 83px
+                    margin-right: 52px
+                .nav
+                    width: 502px
+                    ul
+                        display: flex
+                        justify-content: space-between
+                    ul li:hover
+                        color: $main
+            .footer-text-content
+                display: flex
+                flex-direction: column
+                justify-content: center
+                &__text
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 16px
+                    line-height: 19px
+                    text-align: right
+                    text-transform: uppercase
+                    color: #FFFFFF
+
+@media(max-width: 1400px)
+    .footer
+        min-height: 121px
+        .footer-conteiner
+            padding-top: 2%
+@media(max-width: 1199px)
+    .footer
+        min-height: 78px
+        .footer-conteiner
+            padding-top: 3%
+            .footer__wrapper
+                .footer-content
+                    .logo
+                        display: block
+                        background: url('../assets/icons/logo-large.svg') center center/contain no-repeat
+                        width: 49px
+                        height: 38px
+                        margin-right: 52px
+                    .nav
+                        display: none
+                .footer-text-content
+                    &__text
+                        font-size: 10px
+@media(max-width: 639px)
+    .footer
+        .footer-conteiner
+            padding-top: 6%

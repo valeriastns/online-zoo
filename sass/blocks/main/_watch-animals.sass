@@ -1,0 +1,191 @@
+.watch-animals
+    background: url('../assets/bg/hero-bg-1920.svg') bottom center/cover no-repeat
+    min-height: 773px
+    .watch-now
+        display: flex
+        justify-content: space-between
+        &__descr
+            padding-top: 110px
+            .watch-now-title
+                font-family: 'Rubik', sans-serif
+                font-weight: 300
+                font-size: 72px
+                color: $white
+            .bold-title
+                font-family: 'Rubik', sans-serif
+                font-weight: 500
+                font-size: 64px
+                color: $white
+                margin-bottom: 50px
+            .watch-now-sub-title
+                width: 480px
+                font-family: 'Roboto', sans-serif
+                font-style: normal
+                font-weight: 300
+                font-size: 14px
+                line-height: 20px
+                color: $white
+                margin-bottom: 90px
+            .watch-now-btn
+                width: 258px
+                height: 52px
+                display: block
+                text-align: center
+                padding-top: 14px
+                border-radius: 100px
+                border: none
+                outline: none
+                font-family: 'Roboto Mono', monospace
+                font-weight: 400
+                color: $dark
+                font-size: 18px
+                letter-spacing: -0.05em
+                text-transform: uppercase
+                background: #FFFFFF
+                box-shadow: 0px 2px 50px rgba(185, 213, 217, 0.6)
+            .watch-now-btn:hover
+                background-color: $main
+                color: $white
+                border: 1px solid $white
+            .watch-now-btn:active
+                background-color: $dark
+                color: $white
+            .donate-now-btn
+                display: none
+    .panda
+        margin-top: 50px
+        position: relative
+        .panda-img
+            display: block
+            width: 803px
+            height: 666px
+            background-image: url(../assets/images/main-panda.jpeg)
+            background-position: center center
+            background-repeat: no-repeat
+            position: relative
+
+        .panda-img__mask
+            clip-path: url(#mask)
+
+        .play-button
+            background: url('../assets/icons/play-icon.svg') center center/cover no-repeat
+            width: 98px
+            height: 74px
+            position: absolute
+            top: 48%
+            right: 42%
+
+@media(max-width: 1400px)
+    .watch-animals
+        background: url('../assets/bg/hero-bg-1920.svg') left center/cover no-repeat
+        min-height: 657px
+        margin-bottom: 50px
+        .watch-now
+            &__descr
+                .watch-now-title
+                    font-size: 67px
+                    color: $white
+                .bold-title
+                    font-size: 48px
+                    margin-bottom: 30px
+                .watch-now-sub-title
+                    font-size: 16px
+                    margin-bottom: 30px
+        .panda
+            .panda-img
+                width: 560px
+                height: 463px
+                background: url(../assets/images/panda-1200.png) center/cover no-repeat
+            .panda-img__mask
+                clip-path: none
+@media(max-width: 1200px)
+    .watch-animals
+        background: url('../assets/bg/hero-bg-640.svg') right bottom/cover no-repeat
+        min-height: 430px
+        margin-bottom: 20px
+        .watch-now
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-top: 36px
+            &__descr
+                padding: 0
+                .watch-now-title
+                    font-size: 36px
+                .bold-title
+                    font-size: 30px
+                    margin-bottom: 30px
+                .watch-now-sub-title
+                    font-size: 14px
+                    margin-bottom: 30px
+                    width: 289px
+                .watch-now-btn
+                    width: 170px
+                    height: 37px
+                    font-size: 14px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    padding: 0
+                    margin-right: 16px
+                .donate-now-btn
+                    display: none
+                    width: 170px
+                    height: 37px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    padding: 0
+                    filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+                    background: #C5E1E6
+                    border-radius: 100px
+                    font-family: Roboto Mono
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 14px
+                    line-height: 18px
+                    letter-spacing: 0.1em
+                    text-transform: uppercase
+                    color: #0D444D
+        .panda
+            padding: 0
+            margin-top: 0
+            .panda-img
+                width: 255px
+                height: 211px
+                background: url(../assets/images/panda-1200.png) center center/cover no-repeat
+                margin: 0
+            .panda-img__mask
+                clip-path: none
+            .play-button
+                width: 73px
+                height: 73px
+                right: 36%
+        .content
+            min-height: 470px
+@media(max-width: 640px)
+    .watch-animals
+        background: url('../assets/bg/hero-bg-320.svg') center bottom/cover no-repeat
+        min-height: 531px
+        margin-bottom: 90px
+        .watch-now
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+            padding-top: 29px
+            &__descr
+                padding: 0
+                .watch-now-title
+                    font-size: 32px
+                .bold-title
+                    font-size: 28px
+                    font-weight: 500
+                    margin-bottom: 16px
+                .watch-now-sub-title
+                    margin-bottom: 18px
+                .watch-now-btn
+                    width: 139px
+                    height: 40px
+                .donate-now-btn
+                    width: 139px
+                    height: 40px

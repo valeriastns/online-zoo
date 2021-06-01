@@ -1,0 +1,326 @@
+.pets-in-zoo
+    min-height: 1080px
+    margin-top: 130px
+    .pets-in-zoo__header
+        display: flex
+        justify-content: space-between
+        .pets-in-zoo-title
+            font-family: Rubik
+            font-weight: normal
+            font-size: 24px
+            line-height: 28px
+            text-transform: uppercase
+            color: $dark
+        .button-pets-in-zoo
+            width: 331px
+            height: 52px
+            display: block
+            text-align: center
+            padding: 12px
+            border: 1.5px solid #19707D
+            box-sizing: border-box
+            background-color: #ffff
+            border-radius: 100px
+            font-family: Roboto Mono
+            font-weight: normal
+            font-size: 18px
+            line-height: 24px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            color: #19707D
+            .fa-heart
+                font-size: 20px
+                margin-right: 15px
+                color: #19707D
+        .button-pets-in-zoo:hover
+            background-color: $main
+            color: $white
+            border: 1px solid $white
+            filter: drop-shadow(0px 2px 20px rgba(68, 140, 150, 0.6))
+
+        .button-pets-in-zoo:active
+            background-color: $dark
+            color: $white
+            border: 1px solid $white
+            filter: drop-shadow(0px 2px 20px rgba(26, 77, 83, 0.6))
+
+    #carousel-wrapper
+        width: 100%
+        position: relative
+        .carousel
+            overflow: auto
+            scroll-behavior: smooth
+            scrollbar-width: none
+            width: 1350px
+            overflow-y: visible
+            min-height: 832px
+            .cards-content
+                min-height: 750px
+                display: flex
+                justify-content: center
+                flex-wrap: wrap
+                box-sizing: border-box
+                margin-top: 60px
+                width: 6750px
+                .card
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    height: 364px
+                    width: 440px
+                    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+                    border-radius: 10px
+                    margin: 0 5px
+                    position: relative
+                    transition: 1s all ease-out
+                    .image
+                        .img-wrapper
+                            position: relative
+                            .img-border
+                                visibility: hidden
+                                animation: rotate-out linear 0.5s
+                                background: url('../assets/images/img-frame.svg') center center/contain no-repeat
+                                width: 280px
+                                height: 260px
+                            .img-inner
+                                width: 198px
+                                height: 191px
+                                margin: 0 auto
+                                position: absolute
+                                z-index: 1
+                                top: 32px
+                                left: 39px
+                            .img-inner.panda
+                                background: url('../assets/images/panda-pets.png') center center/cover no-repeat
+                            .img-inner.eagles
+                                background: url('../assets/images/eagle-pets.png') center center/cover no-repeat
+                            .img-inner.gorillas
+                                background: url('../assets/images/gorilla-pets.png') center center/cover no-repeat
+                            .img-inner.alligators
+                                background: url('../assets/images/croco-pets.png') center center/cover no-repeat
+                            .img-inner.elephants
+                                background: url('../assets/images/eleph-pets.png') center center/cover no-repeat
+                            .img-inner.lemurs
+                                background: url('../assets/images/lemurs-pets.png') center center/cover no-repeat
+                        .img-wrapper:hover .img-border
+                            visibility: visible
+                            animation: rotate-in linear 0.5s
+                .card-descr
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    justify-content: space-between
+                    width: 85%
+                    margin-top: 15px
+                    .card-text
+                        &__title
+                            font-family: 'Roboto', sans-serif
+                            font-weight: 500
+                            font-size: 24px
+                            line-height: 28px
+                            color: #2D2D2D
+                            margin-bottom: 15px
+                        &__subtitle
+                            font-family: 'Roboto', sans-serif
+                            font-weight: 300
+                            font-size: 16px
+                            line-height: 19px
+                            color: #919191
+                    .card-icon
+                        background: url('../assets/icons/television.svg') center center/cover no-repeat
+                        display: block
+                        width: 32px
+                        height: 32px
+
+                .card::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background-color: #E5EAEB
+                    position: absolute
+                    top: 70%
+                .card:hover
+                    box-shadow: 0px 2px 30px $main
+
+        .slider-arrows
+            position: absolute
+            top: 46%
+            right: 0
+            &__left
+                background: url('../assets/icons/arrow-left.svg')
+                cursor: pointer
+
+            &__right
+                background: url('../assets/icons/arrow-right.svg')
+                cursor: pointer
+            .button-slider
+                width: 52px
+                height: 52px
+                display: block
+                border: none
+                outline: none
+                transition: transform .2s
+            .button-slider:hover
+                transform: scale(1.5)
+        .penguin-img
+            background: url('../assets/images/Penguin.svg')
+            display: block
+            width: 33px
+            height: 66px
+            position: absolute
+            right: 0
+            top: 89%
+
+@media(max-width: 1400px)
+    .pets-in-zoo
+        margin-top: 0
+        min-height: 687px
+        margin-bottom: 75px
+        #carousel-wrapper
+            .carousel
+                .cards-content
+                    min-height: 590px
+                    .card
+                        height: 285px
+                        width: 351px
+                    .card::after
+                        top: 75%
+                        .image
+                            .img-wrapper
+                                position: relative
+                                .img-border
+                                    animation: rotate-out linear 0.5s
+                                    background: url('../assets/images/img-frame.svg') center center/contain no-repeat
+                                    width: 229px
+                                    height: 234px
+                                .img-inner
+                                    width: 162px
+                                    height: 157px
+                    .card-descr
+                        margin-top: -5px
+                        .card-text
+                            &__title
+                                font-size: 17px
+                                margin-bottom: 0px
+                            &__subtitle
+                                font-size: 13px
+                                text-transform: capitalize
+                        .card-icon
+                            width: 23px
+                            height: 23px
+@media(max-width: 1199px)
+    .pets-in-zoo
+        .pets-in-zoo__header
+            .pets-in-zoo-title
+                font-size: 18px
+            .button-pets-in-zoo
+                width: 269px
+                height: 37px
+                display: flex
+                align-items: center
+                border: 1.5px solid #19707D
+                font-size: 14px
+            .fa-heart
+                font-size: 15px
+
+        #carousel-wrapper
+            position: relative
+            .carousel
+                .cards-content
+                    max-height: 600px
+                    .card
+                        width: 256px
+                        height: 298px
+                    .lemur-card
+                        visibility: hidden
+                    .elephant-card
+                        visibility: hidden
+                    .image
+                        .img-wrapper
+                            position: relative
+                            .img-border
+                                visibility: hidden
+                                animation: rotate-out linear 0.5s
+                                background: url('../assets/images/img-frame.svg') center center/contain no-repeat
+                                width: 250px
+                                height: 230px
+                            .img-inner
+                                width: 169px
+                                height: 164px
+                                top: 32px
+                                left: 39px
+                        .img-wrapper:hover .img-border
+                            visibility: visible
+                            animation: rotate-in linear 0.5s
+                    .card-descr
+                        margin-top: -5px
+                        .card-text
+                            &__title
+                                font-size: 16px
+                                text-transform: capitalize
+                            &__subtitle
+                                font-size: 12px
+
+                        .card-icon
+                            width: 18px
+                            height: 13px
+                            position: absolute
+                            top: 16px
+                            right: 19px
+@media(max-width: 639px)
+    .pets-in-zoo
+        min-height: 775px
+        margin-bottom: 95px
+        position: relative
+        .pets-in-zoo__header
+            .button-pets-in-zoo
+                position: absolute
+                bottom: -8%
+                left: 8%
+        #carousel-wrapper
+            position: relative
+            .cards-content
+                max-height: 662px
+                overflow: hidden
+                .card
+                    width: 240px
+                    height: 313px
+                    margin-bottom: 20px
+                .lemur-card
+                    visibility: hidden
+                .elephant-card
+                    visibility: hidden
+                .image
+                    .img-wrapper
+                        top: 8%
+                        .img-border
+                            width: 230px
+                            height: 215px
+                        .img-inner
+                            width: 152px
+                            height: 147px
+                .card-descr
+                    margin-top: 20px
+                    .card-text
+                        &__title
+                            font-size: 17.45px
+                            text-transform: capitalize
+                            margin-bottom: 9.82px
+                        &__subtitle
+                            font-size: 13.09px
+
+                .card-icon
+                    width: 26.18px
+                    height: 26.18px
+                    position: absolute
+                    top: 17.45px
+                    right: 21.82px
+                .card::after
+                    top: 72%
+                .slider-arrows
+                    position: absolute
+                    top: 42%
+                    right: -18px
+                .penguin-img
+                    display: none

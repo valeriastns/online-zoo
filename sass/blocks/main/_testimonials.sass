@@ -1,0 +1,202 @@
+.testimonials
+    min-height: 364px
+    margin-bottom: 50px
+    width: 100%
+    position: relative
+    .content
+        .testimonials__header
+            display: flex
+            justify-content: space-between
+            .testimonials__title
+                font-family: Rubik
+                font-style: normal
+                font-weight: normal
+                font-size: 24px
+                line-height: 28px
+                text-transform: uppercase
+                color: $dark
+            .button-feedback
+                width: 260px
+                height: 52px
+                display: flex
+                align-items: center
+                justify-content: space-evenly
+                border: 1.5px solid $dark
+                outline: none
+                box-sizing: border-box
+                border-radius: 100px
+                font-family: Roboto Mono
+                font-style: normal
+                font-weight: normal
+                font-size: 18px
+                letter-spacing: 0.1em
+                text-transform: uppercase
+                color: #19707D
+                cursor: pointer
+                .comment-icon
+                    background: url('../assets/icons/comment.svg')
+                    display: block
+                    width: 24px
+                    height: 24px
+                    color: #19707D
+            .button-feedback:hover
+                background-color: $main
+                filter: drop-shadow(0px 2px 20px rgba(68, 140, 150, 0.6))
+                color: $white
+        .carousel
+            overflow: auto
+            scroll-behavior: smooth
+            scrollbar-width: none
+            .reviews
+                min-height: 259px
+                width: 100%
+                display: flex
+                justify-content: space-between
+                margin-top: 60px
+                .review
+                    height: 190px
+                    width: 100%
+                    position: relative
+                    &__bg
+                        background: url(../assets/images/Rectangle.svg) center center/cover no-repeat
+                        height: 100%
+                        width: 500px
+                        .text
+                            position: absolute
+                            width: 390px
+                            height: 68px
+                            top: 28px
+                            left: 45px
+
+                            &__date
+                                font-family: 'Roboto', sans-serif
+                                font-weight: normal
+                                font-size: 14px
+                                line-height: 16px
+                                color: #B3B3B3
+                                margin-bottom: 10px
+                            &__comment
+                                font-family: 'Roboto', sans-serif
+                                font-style: italic
+                                font-weight: normal
+                                font-size: 16px
+                                line-height: 19px
+                                color: #2D2D2D
+
+                    .reviewer
+                        min-height: 69px
+                        display: flex
+                        align-items: center
+                        margin-top: 0px
+                        padding-left: 50px
+
+                        &__photo
+                            width: 68px
+                            height: 68px
+                            display: block
+                            margin-right: 16px
+                        &__photo.user-1
+                            background: url('../assets/images/reviewer-1.svg') center center/cover no-repeat
+                        &__photo.user-2
+                            background: url('../assets/images/reviewer-2.svg')center center/cover no-repeat
+                        &__photo.user-3
+                            background: url('../assets/images/reviewer-3.svg')center center/cover no-repeat
+
+                        &__name
+                            font-family: 'Roboto', sans-serif
+                            font-style: italic
+                            font-weight: normal
+                            font-size: 16px
+                            line-height: 19px
+                            color: #000000
+@media(max-width: 1400px)
+    .testimonials
+        min-height: 341px
+        .content
+            .testimonials__header
+            .reviews
+                min-height: 259px
+                width: 100%
+                display: flex
+                justify-content: space-between
+                margin-top: 60px
+                .review
+                    height: 190px
+                    width: 100%
+                    position: relative
+                    &__bg
+                        background: url(../assets/images/rectangle-120.png) center center/cover no-repeat
+                        height: 100%
+                        width: 367px
+                        .text
+                            width: 222px
+                            height: 57px
+                            top: 40px
+
+                .reviewer
+                    margin-top: -5px
+                    padding-left: 15px
+@media(max-width: 1199px)
+    .testimonials
+        min-height: 364px
+        margin-bottom: 50px
+        .content
+            .testimonials__header
+
+                .testimonials__title
+                    font-size: 18px
+                .button-feedback
+                    width: 210px
+                    height: 37px
+                    font-size: 14px
+            .reviews
+                .review
+                    &__bg
+                        width: 292px
+                .review:nth-child(3)
+                    display: none
+@media(max-width: 640px)
+    .testimonials
+        min-height: 730px
+        margin-bottom: 42px
+        position: relative
+        margin-bottom: 70px
+        .content
+            .testimonials__header
+                margin-bottom: 15px
+                .button-feedback
+                    justify-content: center
+                    position: absolute
+                    bottom: -5%
+                    width: 300px
+                    letter-spacing: 0.1em
+                    .comment-icon
+                        margin-right: 14px
+            .reviews
+                min-height: 636px
+                display: flex
+                flex-direction: column
+                margin-top: 0px
+                .review
+                    &__bg
+                        width: 300px
+                        height: 150
+                        .text
+                            width: auto
+                            left: 22px
+                            // height: 57px
+                            top: 40px
+                            &__date
+                                font-size: 12px
+                                margin-bottom: 10px
+                            &__comment
+                                font-size: 14px
+                .reviewer
+                    margin-top: -35px
+                    margin-left: 8px
+                    &__photo
+                        width: 40px
+                        height: 40px
+                        margin-right: 16px
+                .review:nth-child(3)
+                    display: block

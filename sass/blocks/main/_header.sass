@@ -1,0 +1,245 @@
+.header
+    min-height: 110px
+    width: 100%
+    background-color: #2A8086
+    filter: drop-shadow(0px 1px 10px rgba(18, 87, 91, 0.25))
+    .dropdown-nav
+        max-height: 0px
+        overflow: hidden
+        transition: max-height 2s ease-out 0s
+        &__link
+            display: block
+            text-align: center
+            font-family: Roboto Mono
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 52px
+            text-transform: uppercase
+            color: #F3F7F8
+    .dropdown-nav.expanded
+        max-height: 1000px
+.landing-page-header
+    display: flex
+    justify-content: space-between
+    height: 84px
+    padding-top: 24px
+    .logo-link
+        &__title-hidden
+            width: 0px
+            height: 0px
+            overflow: hidden
+        &__link
+            display: inline-block
+            background: url('../assets/icons/logo-large.svg')
+            width: 108px
+            height: 83px
+            margin-right: 52px
+
+    .nav-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        .main-navigation
+            width: 502px
+            .nav-links-block
+                display: flex
+                justify-content: space-between
+                &__link a:hover
+                    color: $dark
+
+            .nav-links-block .nav-links-block__link.active
+                a
+                    position: relative
+                    cursor: default
+                a:before
+                    content: ''
+                    display: block
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    top: 20px
+                    background-color: $white
+                a:hover
+                    color: $white
+                    cursor: default
+    .burger-menu
+        display: none
+        .burger-toggle
+            .bar
+                width: 35px
+                height: 3px
+                border-radius: 10px
+                background-color: #C5E1E6
+                margin: 6px 0
+                transition: 0.4s
+
+    .user-authorization
+        .authorization-links-block
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            .authorization-links
+                a:hover
+                    color: $dark
+            .authorization-links
+                margin-left: 30px
+            .search
+                display: flex
+                &__icon
+                    display: block
+                    width: 32px
+                    height: 32px
+                    background: url('../assets/icons/search-icon.svg')
+                    transition: all 0.2s ease-in
+                &__input
+                    overflow: hidden
+                    line-height: 28px
+                    border-radius: 50px
+                    border-color: $main
+                    background-color: $white
+                    color: $main
+                    width: 0
+                    padding: 4px 0px
+                    margin-right: 14px
+                    outline: none
+                    border: none
+                    transition: all 0.5s ease
+            .search:hover .search__input
+                width: 150px
+                padding: 4px 10px
+                transition: all 0.5s ease
+            .signup
+                padding: 15px
+                border-radius: 100px
+                text-align: center
+                border: 1px solid #C5E1E6
+            .signup:hover
+                background-color: #196469
+            .signup:active
+                background-color: #C5E1E6
+                a
+                    color: #196469
+            .my-account
+                display: none
+                .my-account-icon
+                    display: block
+                    width: 56px
+                    height: 56px
+                    background: url('../assets/icons/person-login-icon.png')
+                    position: relative
+                .my-account-icon:before
+                    content: attr(title)
+                    text-align: center
+                    position: absolute
+                    bottom: -38px
+                    left: -50px
+                    height: 40px
+                    width: 150px
+                    background: url('../assets/images/tooltip-reverse.png') center center/cover no-repeat
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    text-transform: capitalize
+                    line-height: 50px
+                    white-space: pre
+                    color: $dark
+                    display: none
+                    border-radius: 5px
+                    z-index: 5
+                .my-account-icon:hover:before
+                    display: block
+            .logout-btn
+                display: none
+
+        .authorization-links-block.logged
+            .signup
+                display: none
+            .login
+                display: none
+            .my-account
+                display: block
+                position: relative
+            .logout-btn.visible
+                display: block
+                position: absolute
+                bottom: -42px
+                right: -28px
+                border: 1px solid $dark
+                border-radius: 10px
+                color: $dark
+                background-color: $white-blue
+                padding: 6px 25px
+                text-transform: capitalize
+                cursor: pointer
+                white-space: nowrap
+
+@media(max-width: 1400px)
+    .header
+        height: 124px
+        // margin-bottom: 90px
+        .nav-block
+            padding-top: 30px
+        .user-authorization
+            .authorization-links-block
+                .login
+                    display: none
+                .signup
+                    display: none
+                .my-account
+                    display: block
+                    .my-account-icon
+                        display: block
+
+@media(max-width: 1199px)
+    .header
+        min-height: 78px
+        height: auto
+        position: sticky
+        top: 0px
+        z-index: 10
+        .landing-page-header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 84px
+            padding: 0
+        .logo-link
+            &__link
+                display: flex
+                align-items: center
+                background: url('../assets/icons/logo-large.svg') center center/cover no-repeat
+                width: 49px
+                height: 38px
+        .nav-block
+            display: flex
+            justify-content: flex-end
+            align-items: center
+            padding: 0
+            .main-navigation
+                display: none
+            .user-authorization
+                display: none
+            .burger-menu
+                display: block
+                .burger-toggle
+                    display: block
+                    cursor: pointer
+        .dropdown-nav
+            display: block
+@media(max-width: 639px)
+    .header
+        position: static
+        min-height: 50px
+        .landing-page-header
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 50px
+            padding: 0
+    .dropdown-nav
+        &__link
+        &__link:hover
+            background: #C5E1E6
