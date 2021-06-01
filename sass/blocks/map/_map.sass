@@ -1,0 +1,255 @@
+.map
+    background-color: $main
+    overflow: hidden
+    .content
+        position: relative
+        .map-title
+            font-family: Rubik
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 28px
+            text-transform: uppercase
+            color: #C5E1E6
+            padding-top: 25px
+        .map-wrapper
+            width: 100%
+            height: 1000px
+            display: flex
+            align-items: center
+            margin-top: 50px
+            position: relative
+            overflow: hidden
+            .map-bg
+                background: url('../assets/bg/map-1920.svg') center center/cover no-repeat
+                min-height: 950px
+                width: 1467px
+                display: block
+        .animal-location
+            position: absolute
+            .animal-card
+                position: relative
+                cursor: pointer
+                .tooltip
+                    position: relative
+                    visibility: hidden
+                    width: 410px
+                    height: 89px
+                    background-color: #fff
+                    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06)
+                    border-radius: 10px
+                    padding: 24px 8px
+                    opacity: 1
+                    position: absolute
+                    top: -110px
+                    left: -160px
+                    transition: all 0.2s linear
+                    &__descr
+                        font-family: "Roboto", sans-serif
+                        font-weight: 400
+                        font-size: 14px
+                        line-height: 143%
+                        text-align: center
+                        color: $dark
+                        text-transform: capitalize
+                .tooltip:after
+                    content: ""
+                    position: absolute
+                    top: 89px
+                    left: 190px
+                    width: 0
+                    height: 0
+                    border-style: solid
+                    border-width: 16px 15px 0 15px
+                    border-color: #fff transparent transparent transparent
+                .animal-img:hover .map-animal-img-bg
+                    animation: rotate-in linear 0.5s
+                .animal-img
+                    position: relative
+                    width: 90px
+                    height: 90px
+                    .map-animal-img-bg
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 90px
+                        height: 83px
+                        fill: #C5E1E5
+                        filter: drop-shadow(0px 4px 10px #C5E1E5)
+                        animation: rotate-out linear 0.4s
+                        .animal-img-bg
+                            overflow: hidden
+                    .animal-photo
+                        position: absolute
+                        display: block
+                        top: 6px
+                        left: 9px
+                        width: 73px
+                        height: 70px
+                        -webkit-mask-image: url('../assets/images/animals-border.svg')
+                        mask-size: 73px 70px
+                    .animal-photo__eagle
+                        background: url('../assets/images/eagle.jpg') no-repeat center/174px auto
+                    .animal-photo__alligator
+                        background: url('../assets/images/crocodile.jpg') no-repeat left 0 bottom 0/129px auto
+                    .animal-photo__gorilla
+                        background: url('../assets/images/gorilla.jpg') no-repeat center/120px auto
+                    .animal-photo__panda
+                        background: url('../assets/images/panda.jpg') no-repeat center/106px auto
+
+            .tooltip-button
+                display: none
+        .eagle-location
+            top: 50%
+            left: 9%
+        .alligator-location
+            top: 53%
+            left: 23%
+        .gorilla-location
+            top: 66%
+            left: 46%
+        .panda-location
+            top: 52%
+            left: 72%
+        .animal-location:hover .tooltip
+            visibility: visible
+    .zoom-signs
+        display: block
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        padding-bottom: 23px
+        z-index: 10
+        .sign
+            width: 32.52px
+            height: 32.52px
+            display: block
+            transition: 1s all ease-out
+            z-index: 10;
+        .sign:hover
+            transform: scale(1.5)
+        .sign-plus
+            background: url('../assets/icons/plus.svg') center center/cover no-repeat
+            margin-right: 15px
+        .sign-minus
+            background: url('../assets/icons/minus.svg') center center/cover no-repeat
+@media(max-width: 1400px)
+    .map
+        background-color: $main
+        .content
+            .map-title
+            .map-wrapper
+                margin-top: -60px
+                .map-bg
+                    background: url('../assets/bg/map-1920.svg') center center/contain no-repeat
+            .animal-location
+            .eagle-location
+                top: 40%
+                left: 9%
+            .alligator-location
+                top: 48%
+                left: 21%
+            .gorilla-location
+                top: 56%
+                left: 47%
+            .panda-location
+                top: 45%
+                left: 72%
+@media(max-width: 1199px)
+    .map
+        background-color: $main
+        .content
+            .map-title
+                font-size: 18px
+            .map-wrapper
+                height: 609px
+                // margin-top: -60px
+                .map-bg
+                    background: url('../assets/bg/map-1920.svg') center center/contain no-repeat
+                    min-height: 500px
+            .animal-location
+                position: absolute
+                .animal-card
+                    position: relative
+                    cursor: pointer
+                    .tooltip
+                        width: 194px
+                        height: 122px
+                        top: -135px
+                        left: -54px
+                    &__descr
+                        font-size: 10px
+                        text-transform: capitalize
+                    .tooltip::after
+                        top: 100%
+                        left: 43%
+                .tooltip-button
+                    display: none
+                    position: relative
+                    width: 150px
+                    height: 32px
+                    text-align: center
+                    padding: 6px
+                    top: -148px
+                    left: -30px
+                    font-family: Roboto Mono
+                    font-weight: 400
+                    font-size: 12px
+                    letter-spacing: 0.1em
+                    text-transform: uppercase
+                    color: #19707D
+                    border: 1.5px solid #19707D
+                    border-radius: 100px
+                    cursor: pointer
+                    transition: 1s all all ease-out
+                .tooltip-button:hover
+                    background-color: $white
+                    filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+            .animal-location:hover .tooltip-button
+                display: block
+
+@media(max-width: 639px)
+    .map
+        .content
+            .map-title
+                display: none
+            .map-wrapper
+                height: 485px
+                .map-bg
+                    background: url('../assets/bg/map-320.svg') center center/contain no-repeat
+                    min-height: 397px
+                    margin-top: 120px
+                    margin-bottom: 70px
+            .animal-location
+                position: absolute
+                .animal-card
+                    position: relative
+                    cursor: pointer
+                    .animal-img:hover .map-animal-img-bg
+                        animation: rotate-in linear 0.5s
+                    .animal-img
+                        position: relative
+                        width: 71px
+                        height: 71px
+                        .map-animal-img-bg
+                            height: 71px
+                            width: 71px
+                            .animal-img-bg
+                        .animal-photo
+                            left: 6%
+                            width: 62px
+                            height: 58px
+                            mask-size: 62px 58px
+                .tooltip-button
+                    top: -127px
+            .eagle-location
+                top: 48%
+            .alligator-location
+                left: 37%
+            .gorilla-location
+                top: 64%
+                left: 89%
+            .panda-location
+                display: none
+            .animal-location:hover .tooltip
+                visibility: visible
