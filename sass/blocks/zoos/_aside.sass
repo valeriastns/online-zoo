@@ -1,0 +1,290 @@
+.zoos-content
+    min-height: 2186px
+    background: url('../assets/bg/donate-bg-1920.svg') bottom center/contain no-repeat
+    margin-bottom: -100px
+    .dropdown-zoos-menu
+        display: none
+    .dropdown-zoos
+        display: none
+    .content
+        display: flex
+        .side-bar
+            position: sticky
+            margin: 0
+            margin-right: 50px
+            top: 40px
+            margin-top: 40px
+            height: max-content
+            .side-bar-wrapper
+                list-style: none
+                margin: 0
+                padding: 0
+                .side-bar-item.active
+                    a
+                        cursor: default
+                .side-bar-item
+                    margin-bottom: 30px
+                    a
+                        position: relative
+                        display: inline-block
+                    a:before
+                        content: attr(title)
+                        align-items: center
+                        justify-content: center
+                        position: absolute
+                        top: -52px
+                        left: -40px
+                        height: 52px
+                        width: 200px
+                        background: url('../assets/images/tooltip.png') center center/cover no-repeat
+                        font-family: Roboto
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 20px
+                        white-space: pre
+                        color: $dark
+                        display: none
+                        z-index: 5
+                    a:hover:before
+                        display: flex
+                    .side-bar-image
+                        .image
+                            .img-wrapper
+                                position: relative
+                                z-index: 2
+                                .img-border
+                                    visibility: hidden
+                                    animation: rotate-out linear 0.4s
+                                    background: url('../assets/images/img-frame.svg')
+                                    width: 120px
+                                    height: 115px
+                                    padding-top: 20px
+                                .active-border
+                                    visibility: visible
+                                    animation: rotate-out linear 0.4s
+                                    background: url('../assets/images/frame-640-zoos.svg') center center/cover no-repeat
+                                    width: 120px
+                                    height: 115px
+                                    padding-top: 20px
+                                .img-inner
+                                    width: 76px
+                                    height: 73px
+                                    margin: 0 auto
+                                    position: absolute
+                                    z-index: 1
+                                    top: 23px
+                                    left: 23px
+                                .img-inner.panda
+                                    background: url('../assets/images/panda.png') center center/cover no-repeat
+                                .img-inner.gorilla
+                                    background: url('../assets/images/gorilla.png') center center/cover no-repeat
+                                .img-inner.eagle
+                                    background: url('../assets/images/eagle.png') center center/cover no-repeat
+                                .img-inner.alligator
+                                    background: url('../assets/images/alligator.png') center center/cover no-repeat
+                            .img-wrapper:hover .img-border
+                                visibility: visible
+                                animation: rotate-in linear 0.5s
+                            @keyframes rotate-in
+                                0%
+                                    transform: rotate(0deg)
+                                100%
+                                    transform: rotate(360deg)
+                            @keyframes rotate-out
+                                0%
+                                    transform: rotate(360deg)
+                                100%
+                                    transform: rotate(0deg)
+                            .img-title
+                                font-family: Roboto Mono
+                                font-style: normal
+                                font-weight: 500
+                                font-size: 14px
+                                line-height: 18px
+                                text-align: center
+                                text-transform: uppercase
+                                color: #2D2D2D
+
+@media(max-width: 1400px)
+    .zoos-content
+        min-height: 2020px
+        width: 100%
+        background: url('../assets/bg/donate-bg-1200.svg') bottom center/contain no-repeat
+        margin-bottom: 0
+@media(max-width: 1199px)
+    .zoos-content
+        min-height: 1811px
+        background: url('../assets/bg/donate-bg-640.svg') bottom center/contain no-repeat
+        margin-bottom: -75px
+        .content
+            .side-bar
+                margin-right: 10px
+                top: 100px
+                margin-top: 20px
+                .side-bar-wrapper
+                    .side-bar-item.active
+                        a
+                            cursor: default
+                    .side-bar-item
+                        margin-bottom: 15px
+                        a
+                            position: relative
+                            display: inline-block
+                        a:before
+                            display: none
+                        a:hover:before
+                            display: none
+                        .side-bar-image
+                            .image
+                                .img-wrapper
+                                    position: relative
+                                    z-index: 2
+                                    .img-border
+                                        visibility: hidden
+                                        animation: rotate-out linear 0.4s
+                                        background: url('../assets/images/frame-640-zoos.svg') center center/cover no-repeat
+                                        width: 75px
+                                        height: 70px
+                                        padding-top: 20px
+                                    .active-border
+                                        visibility: visible
+                                        animation: rotate-out linear 0.4s
+                                        background: url('../assets/images/frame-640-zoos.svg') center center/cover no-repeat
+                                        width: 75px
+                                        height: 70px
+                                        padding-top: 20px
+                                    .img-inner
+                                        width: 41px
+                                        height: 40px
+                                        top: 17px
+                                        left: 15px
+                                .img-wrapper:hover .img-border
+                                    visibility: visible
+                                    animation: rotate-in linear 0.5s
+                                .img-title
+                                    font-size: 12px
+                                    font-family: "Roboto", sans-serif
+                                    text-transform: capitalize
+@media(max-width: 639px)
+    .zoos-content
+        min-height: 1955px
+        background: url('../assets/bg/donate-bg-320.svg') bottom center/contain no-repeat
+        margin-bottom: 0px
+        .dropdown-zoos-menu
+            display: block
+            width: 100%
+            height: 61px
+            background: #488D92
+            border-bottom: 2px solid #6A9C9F
+            display: flex
+            align-items: center
+            cursor: pointer
+            &__img
+                background: url('../assets/images/panda-zoos.png') center center/cover no-repeat
+                display: block
+                width: 41px
+                height: 40px
+                margin-left: 19px
+                margin-right: 15px
+            &__title
+                font-family: Roboto
+                font-style: normal
+                font-weight: normal
+                font-size: 12px
+                line-height: 14px
+                text-align: center
+                color: #F3F7F8
+                flex-grow: 2
+                text-align: left
+            &__icon
+                background: url('../assets/icons/arrow-down-zoos.svg')
+                display: block
+                width: 22px
+                height: 22px
+                margin-right: 35px
+            &__icon:active
+                transform: rotate(180deg)
+        .dropdown-zoos.expanded
+            max-height: 700px
+        .dropdown-zoos
+            display: block
+            max-height: 0px
+            overflow: hidden
+            transition: 2s all ease-out
+            &__link
+                display: flex
+                align-items: center
+                width: 100%
+                height: 70px
+                background: #488D92
+                // border-top: 2px solid #6A9C9F
+                border-bottom: 2px solid #6A9C9F
+                width: 100%
+            &__link.eagles-link
+                .dropdown-zoos__img
+                    background: url('../assets/images/eagle-zoos.png') center center/cover no-repeat
+                    display: block
+                    width: 41px
+                    height: 40px
+                    margin-left: 19px
+                    margin-right: 15px
+
+                .dropdown-zoos__title
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 14px
+                    text-align: center
+                    color: #F3F7F8
+                    flex-grow: 2
+                    text-align: left
+                    text-transform: capitalize
+
+            &__link.gorillas-link
+                .dropdown-zoos__img
+                    background: url('../assets/images/gorilla-zoos.png') center center/cover no-repeat
+                    display: block
+                    width: 41px
+                    height: 40px
+                    margin-left: 19px
+                    margin-right: 15px
+
+                .dropdown-zoos__title
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 14px
+                    text-align: center
+                    color: #F3F7F8
+                    flex-grow: 2
+                    text-align: left
+                    text-transform: capitalize
+
+            &__link.alligators-link
+                .dropdown-zoos__img
+                    background: url('../assets/images/alligator-zoos.png') center center/cover no-repeat
+                    display: block
+                    width: 41px
+                    height: 40px
+                    margin-left: 19px
+                    margin-right: 15px
+
+                .dropdown-zoos__title
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 14px
+                    text-align: center
+                    color: #F3F7F8
+                    flex-grow: 2
+                    text-align: left
+                    text-transform: capitalize
+
+        .content
+            display: flex
+            .side-bar
+                display: none
