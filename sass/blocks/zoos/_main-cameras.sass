@@ -1,0 +1,106 @@
+.main-camera
+    width: 1325px
+    margin-bottom: 40px
+    margin-top: 55px
+    .main-camera-header
+        display: flex
+        justify-content: space-between
+        margin-top: 40px
+        margin-bottom: 24px
+    .main-camera-title
+        font-family: Rubik
+        font-style: normal
+        font-weight: normal
+        font-size: 24px
+        line-height: 28px
+        text-transform: uppercase
+        color: #0D444D
+    .button-icons
+        display: flex
+        .button
+            display: block
+            width: 42px
+            height: 42px
+            outline: none
+            border: none
+            cursor: pointer
+        .btn-info
+            background: url('../assets/icons/info-icon.svg') center center/cover no-repeat
+            margin-right: 35px
+        .btn-like
+            background: url('../assets/icons/heart-icon.svg') center center/cover no-repeat
+        .btn-like.active
+            background: url('../assets/icons/filled-heart.svg') center center/cover no-repeat
+    
+.main-camera-subt
+    font-family: Rubik
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    text-transform: capitalize
+    color: #0D444D
+    margin-top: 0
+    margin-bottom: 8px
+
+.main-camera-video
+    width: 100%
+    height: 604px
+    background: rgba(0, 0, 0, 0.25)
+    border-radius: 19px
+
+@media(max-width: 1400px)
+    .main-camera
+        width: 1007px
+
+@media(max-width: 1199px)
+    .main-camera
+        width: 96%
+        margin-top: 0px
+        margin-bottom: 10px
+        .main-camera-header
+            display: flex
+            justify-content: space-between
+            margin-top: 20px
+            margin-bottom: 3px
+            .main-camera-title
+                font-size: 18px
+                margin-bottom: 3px
+            .button-icons
+                display: flex
+                .button
+                    width: 34px
+                    height: 34px
+                .btn-info
+                    margin-right: 24px
+    .main-camera-subt
+        font-size: 14px
+    .main-camera-video
+        width: 531px
+        height: 314px
+@media(max-width: 639px)
+    .main
+        .main-camera
+            width: 100%
+            margin-top: 15px
+            margin-bottom: 17px
+            .main-camera-header
+                display: flex
+                justify-content: space-between
+                margin-top: 0px
+                margin-bottom: 3px
+                .main-camera-title
+                    font-size: 18px
+                    margin-bottom: 3px
+                .button-icons
+                    display: flex
+                    .button
+                        width: 24px
+                        height: 24px
+                    .btn-info
+                        margin-right: 8px
+            .main-camera-subt
+                font-size: 14px
+            .main-camera-video
+                width: 300px
+                height: 177px
