@@ -1,0 +1,43 @@
+.zoos-donate
+    padding-top: 210px
+    padding-left: 470px
+    &__btn
+        width: 356px
+        height: 52px
+        display: block
+        text-align: center
+        background: $white
+        border-radius: 100px
+        outline: none
+        border: none
+        filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+        font-family: Roboto Mono
+        font-weight: normal
+        font-size: 18px
+        line-height: 24px
+        letter-spacing: -0.05em
+        text-transform: uppercase
+        color: $dark
+        cursor: pointer
+    &__btn:hover
+        background: $main
+        color: $white
+        filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6))
+
+@media (max-width: 1400px)
+    .zoos-donate
+        margin-top: 20px
+        padding-left: 270px
+
+@media (max-width: 1199px)
+    .zoos-donate
+        padding-left: 50px
+        padding-bottom: 105px
+@media (max-width: 639px)
+    .zoos-donate
+        margin-left: -55px
+        padding-bottom: 25px
+        margin-top: 0px
+        padding-top: 65%
+        &__btn
+            width: 300px
