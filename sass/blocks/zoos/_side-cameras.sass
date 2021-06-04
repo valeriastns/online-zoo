@@ -1,0 +1,156 @@
+.side-cameras
+    margin-bottom: 100px
+    .content
+        display: block
+        .side-cameras-title
+            font-family: Rubik
+            font-style: normal
+            font-weight: normal
+            font-size: 18px
+            line-height: 21px
+            text-transform: capitalize
+            color: #0D444D
+            margin-bottom: 10px
+        .side-cameras-content
+            width: 100%
+            display: flex
+            align-items: center
+            .cameras-wrapper
+                display: flex
+                justify-content: space-between
+                .camera-wrapper
+                    position: relative
+                    margin-right: 10px
+                    .camera-plug
+                        position: absolute
+                        top: 0
+                        bottom: 0
+                        left: 0
+                        right: 0
+                    .side-video
+                        width: 380px
+                        height: 240px
+                        background: rgba(2, 2, 2, 0.25)
+                        border-radius: 18px
+                    .side-video-text
+                        position: absolute
+                        background: rgba(46, 46, 46, 0.8)
+                        border-radius: 8px
+                        color: #fff
+                        top: 24px
+                        left: 28px
+                        font-family: Roboto
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 12px
+                        line-height: 14px
+                        text-transform: uppercase
+                        color: #FFFFFF
+                        font-style: normal
+                        padding: 8px 20px
+            .slider-arrows
+                width: 52px
+                height: 104px
+                margin-top: 10px
+                &__left
+                    background: url('../assets/icons/arrow-left.svg') center center/cover no-repeat
+                &__right
+                    background: url('../assets/icons/arrow-right.svg') center center/cover no-repeat
+                .button
+                    width: 52px
+                    height: 52px
+                    border: none
+                    outline: none
+                    transition: transform .2s
+                .button:hover
+                    transform: scale(1.5)
+
+@media(max-width: 1400px)
+    .side-cameras
+        margin-bottom: 100px
+        .content
+            .side-cameras-title
+            .side-cameras-content
+                .cameras-wrapper
+                    .camera-wrapper
+                        .camera-plug
+                        .side-video
+                            width: 295px
+                            height: 193px
+                .slider-arrows
+                    width: 52px
+                    height: 104px
+                    margin-top: 10px
+                    &__left
+                        background: url('../assets/icons/arrow-left.svg') center center/cover no-repeat
+                    &__right
+                        background: url('../assets/icons/arrow-right.svg') center center/cover no-repeat
+                    .button
+                        width: 52px
+                        height: 52px
+                        border: none
+                        outline: none
+                        transition: transform .2s
+                    .button:hover
+                        transform: scale(1.5)
+
+@media(max-width: 1199px)
+    .side-cameras
+        margin-bottom: 50px
+        .content
+            padding-left: 0px
+            .side-cameras-title
+                font-size: 14px
+            .side-cameras-content
+                width: 100%
+                display: flex
+                align-items: center
+                .cameras-wrapper
+                    .camera-wrapper
+                        position: relative
+                        .camera-plug
+                        .side-video
+                            width: 234px
+                            height: 154px
+                        .side-video-text
+                .cameras-wrapper:nth-child(3)
+                    display: none
+@media(max-width: 639px)
+    .side-cameras
+        margin-bottom: 32px
+        .content
+            padding-left: 0px
+            .side-cameras-title
+                font-size: 14px
+            .side-cameras-content
+                width: 100%
+                display: flex
+                align-items: center
+                .cameras-wrapper
+                    .camera-wrapper
+                        position: relative
+                        margin-right: 7px
+                        .camera-plug
+                        .side-video
+                            width: 134px
+                            height: 87px
+                        .side-video-text
+                            top: 8px
+                            left: 8px
+                            font-size: 5px
+                            border-radius: 4px
+                            line-height: 11px
+                            padding: 2px 12px
+                .cameras-wrapper:nth-child(3)
+                    display: none
+                .slider-arrows
+                    width: 19px
+                    height: 66px
+                    margin-top: 20px
+                    margin-left: -17px
+                    &__left
+                        background: url('../assets/icons/arrow-left.svg') center center/cover no-repeat
+                        display: none
+                    &__right
+                        background: url('../assets/icons/arrow-right.svg') center center/cover no-repeat
+                .button
